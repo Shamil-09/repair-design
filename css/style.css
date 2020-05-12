@@ -408,11 +408,10 @@ body {
 }
 
 .button {
-  padding: 11px 23px;
+  padding: 8px 20px 15px 17px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.94rem;
 }
 
 .button:hover {
@@ -439,6 +438,8 @@ body {
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;
+  width: 207px;
+  height: 51px;
 }
 
 .header {
@@ -465,13 +466,14 @@ body {
   font-size: 1.07rem;
   color: #E3B873;
   text-transform: uppercase;
+  margin-right: 11px;
 }
 
 .nav__item {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-  margin-right: 2.55rem;
+  margin-right: 2.64rem;
 }
 
 .nav__item:hover {
@@ -482,10 +484,15 @@ body {
 
 .phone {
   color: #E3B873;
+  font-size: 14px;
 }
 
 .contacts__phone {
   margin-right: 45px;
+}
+
+.button {
+  padding: 11px 21px 12px 20px;
 }
 
 .hero {
@@ -526,12 +533,14 @@ body {
   font-size: 1.57rem;
   max-width: 504px;
   margin: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 2.92rem;
+  line-height: 2.2rem;
 }
 
 .hero__button {
-  margin-right: 20px;
-  padding: 20px 35px;
+  margin-right: 1.12rem;
+  padding: 19px 28px;
+  font-size: 0.95rem;
 }
 
 .hero__instagram {
@@ -611,7 +620,6 @@ body {
 }
 
 .title {
-  margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
@@ -628,6 +636,9 @@ body {
   }
   .nav__item {
     margin-right: 1rem;
+  }
+  .hero__text {
+    margin-top: 2.5rem;
   }
 }
 
@@ -655,7 +666,7 @@ body {
   }
   .title {
     font-size: 1.64rem;
-    margin-bottom: 1.14rem;
+    line-height: 3.8rem;
   }
   .hero__scroll-down {
     display: none;
