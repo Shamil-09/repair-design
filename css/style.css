@@ -408,7 +408,7 @@ body {
 }
 
 .button {
-  padding: 13px 20px;
+  padding: 11px 23px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
@@ -462,19 +462,16 @@ body {
 }
 
 .logo {
+  font-size: 1.07rem;
   color: #E3B873;
   text-transform: uppercase;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-  animation-direction: reverse;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
 }
 
 .nav__item {
   text-decoration: none;
+  text-transform: uppercase;
   color: #fff;
-  margin-right: 2.85rem;
+  margin-right: 2.55rem;
 }
 
 .nav__item:hover {
@@ -521,13 +518,20 @@ body {
   margin-left: 4.28rem;
 }
 
+.hero__title {
+  margin-bottom: 1rem;
+}
+
 .hero__text {
   font-size: 1.57rem;
   max-width: 504px;
+  margin: 0;
+  margin-bottom: 3rem;
 }
 
 .hero__button {
   margin-right: 20px;
+  padding: 20px 35px;
 }
 
 .hero__instagram {
@@ -586,7 +590,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 14px;
+  font-size: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -611,6 +615,7 @@ body {
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
+  line-height: 1.4;
 }
 
 .title--primary {
@@ -646,9 +651,11 @@ body {
     margin-right: 0;
     color: #fff;
     text-decoration: none;
+    margin-right: 18px;
   }
   .title {
     font-size: 1.64rem;
+    margin-bottom: 1.14rem;
   }
   .hero__scroll-down {
     display: none;
@@ -664,6 +671,9 @@ body {
     display: block;
     min-width: 22.86rem;
     margin-bottom: 1.85rem;
+  }
+  .logo {
+    margin-left: 18px;
   }
 }
 
