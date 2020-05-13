@@ -701,6 +701,21 @@ img {
   margin-bottom: -1.79rem;
 }
 
+.design__text {
+  font-family: 'FuturaBookC', cursive;
+  text-transform: none;
+  font-size: 19.2px;
+  line-height: 27px;
+}
+
+.design__pricetag {
+  padding: 1.21rem 5.54rem 1.21rem 2.36rem;
+}
+
+.design__section-title {
+  margin-bottom: 3.01rem;
+}
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px;
@@ -780,6 +795,12 @@ img {
   }
   .card__text {
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .design__card {
+    margin-bottom: 7.14rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
