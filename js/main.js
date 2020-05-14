@@ -12,3 +12,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   closeBnt.addEventListener('click', switchModal);
 });
+
+
+
+document.addEventListener('keydown', function (event) {
+  var modal = document.querySelector('.modal')
+  if (event.key === 'Escape') {
+    modal.style.display = 'none'
+  }
+})
+
+
+
