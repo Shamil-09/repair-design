@@ -426,7 +426,20 @@ img {
   cursor: pointer;
 }
 
-.button--primary {
+.btn-top {
+  display: non;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 199;
+  border: none;
+  background-color: #E3B873;
+  cursor: pointer;
+  padding: 15px 40px;
+  border-radius: 5px;
+}
+
+.btn-top--primary {
   background-color: #E3B873;
   color: #fff;
   -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
@@ -437,12 +450,12 @@ img {
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
-.button--primary:hover {
+.btn-top--primary:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.button--outline {
+.btn-top--outline {
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;

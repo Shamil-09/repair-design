@@ -1,27 +1,4 @@
 
-// document.addEventListener("DOMContentLoaded", function (event) {
-//   const modal = document.querySelector('.modal');
-//   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-//   const closeBnt = document.querySelector('.modal__close');
-//   const switchModal = () => {
-//     modal.classList.toggle('modal--visible');
-//   }
-//   modalBtn.forEach(element => {
-//     element.addEventListener('click', switchModal);
-//   });
-
-//   closeBnt.addEventListener('click', switchModal);
-// });
-
-
-
-// document.addEventListener('keydown', function (event) {
-//   var modal = document.querySelector('.modal')
-//   if (event.key === 'Escape') {
-//     modal.style.display = 'none'
-//   }
-// })
-
 
 $(document).ready(function () {
   var modal = $('.modal'),
@@ -35,3 +12,18 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
 });
+
+// -------------------------------------------------------------------------
+var $btnTop = $('.btn-top')
+$(window).on('scroll', function () {
+  if ($(window).scrollTop() >= 20) {
+    $btnTop.fadeIn();
+  } else {
+    $btnTop.fadeOut();
+  }
+});
+
+$btnTop.on('click', function () {
+  $('html,body').animate({ scrollTop: 0 }, 1000)
+})
+//---------------------------------------------------------------------------
