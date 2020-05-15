@@ -427,7 +427,7 @@ img {
 }
 
 .btn-top {
-  display: non;
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 40px;
@@ -437,6 +437,10 @@ img {
   cursor: pointer;
   padding: 15px 40px;
   border-radius: 5px;
+}
+
+.btn-top:hover {
+  background-color: #9A835D;
 }
 
 .btn-top--primary {
