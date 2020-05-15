@@ -362,9 +362,31 @@ template {
   margin: auto;
 }
 
-.container .block {
+.block {
   -webkit-animation: show 2s ease 2s infinite;
           animation: show 2s ease 2s infinite;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.col-30 {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.col-50 {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 *, *:before, *:after {
@@ -385,10 +407,51 @@ body {
   padding: 60px 0;
 }
 
+.section--dark {
+  background-color: #131313;
+  color: #fff;
+}
+
 .section-title {
   text-align: center;
+}
+
+.section-title--left {
+  text-align: left;
+}
+
+.section-title__heading {
   text-transform: uppercase;
   font-family: 'Yeseva One', cursive;
+  line-height: 138.6%;
+  font-size: 1.93rem;
+}
+
+.section-title__heading--primary {
+  color: #E3B873;
+}
+
+.section-title__word {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-title__word::after {
+  content: '';
+  width: 90px;
+  height: 2px;
+  background-color: #E3B873;
+  margin-left: 3rem;
+}
+
+.section-title__text {
+  font-size: 1.28rem;
+  line-height: 2.07rem;
+  max-width: 31.57rem;
 }
 
 .section-title_image {
@@ -605,6 +668,17 @@ img {
   background-color: rgba(19, 19, 19, 0.7);
 }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 3.46rem;
+  background-color: #131313;
+}
+
 .hero__content {
   position: relative;
   max-width: 47.84rem;
@@ -639,6 +713,7 @@ img {
 
 .hero__scroll-down {
   position: absolute;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -718,23 +793,6 @@ img {
 
 .types__section-title {
   margin-bottom: 2.21rem;
-}
-
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.col {
-  -ms-flex-preferred-size: 32%;
-      flex-basis: 32%;
 }
 
 .card__text {
