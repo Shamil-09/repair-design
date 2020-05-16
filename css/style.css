@@ -385,8 +385,8 @@ template {
 }
 
 .col-50 {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  width: 50%;
+  margin-top: 4.9rem;
 }
 
 *, *:before, *:after {
@@ -452,6 +452,7 @@ body {
   font-size: 1.28rem;
   line-height: 2.07rem;
   max-width: 31.57rem;
+  margin-bottom: 3rem;
 }
 
 .section-title_image {
@@ -583,7 +584,7 @@ img {
   border: none;
   background-color: #E3B873;
   cursor: pointer;
-  padding: 15px 40px;
+  padding: 10px 15px;
   border-radius: 5px;
 }
 
@@ -789,6 +790,66 @@ img {
 
 .title--primary {
   color: #E3B873;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 3.3rem;
+}
+
+.swiper-slide__text {
+  width: 190px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin-bottom: 2.42rem;
+}
+
+.swiper-slide__heading {
+  font-size: 1.285rem;
+  line-height: 1.78rem;
+  color: #E3B873;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  margin-bottom: 0.64rem;
+  margin-top: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  bottom: 0;
+  top: auto;
+  background-size: 42px;
+  width: 42px;
+  height: 14px;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0;
+  background: url("../img/arrow-prev.svg") no-repeat center;
+}
+
+.swiper-button-next {
+  background: url("../img/arrow-next.svg") no-repeat center;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  bottom: -2px;
 }
 
 .types__section-title {
@@ -1020,6 +1081,28 @@ img {
 @media screen and (max-width: 760px) {
   .design__card {
     margin-bottom: 7.14rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .section-title__word::after {
+    display: none;
+  }
+  .section-title__heading {
+    margin-top: 0;
+  }
+  .section-title__text {
+    font-size: 14px;
+  }
+  .section--dark {
+    padding: 0;
+  }
+  .col-50 {
+    width: 100%;
+    padding-right: 1.3rem;
+    padding-left: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 2.36rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,6 +9,7 @@
       margin-top: 2.5rem
 
 @media screen and ( max-width: 992px )
+
   .nav
     display: none
   .hero
@@ -69,3 +70,25 @@
   .design
     &__card
       margin-bottom: 7.14rem
+
+@media screen and ( max-width: 760px )
+
+  .section
+    &-title
+      &__word
+        &::after
+          display: none
+      &__heading
+        margin-top: 0
+      &__text
+        font-size: 14px
+    &--dark
+      padding: 0
+
+  .col
+    &-50
+      width: 100%
+      padding-right: 1.3rem
+      padding-left: 1.3rem
+      margin-top: 0
+      margin-bottom: 2.36rem
