@@ -12,6 +12,17 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
 
+
+
+  $(document).keydown(function (event) {
+    if (event.keyCode == 27) {
+      modal.toggleClass('modal');
+    }
+  });
+
+
+
+
   var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     pagination: {
@@ -47,3 +58,7 @@ $btnTop.on('click', function () {
   $('html,body').animate({ scrollTop: 0 }, 1000)
 })
 //---------------------------------------------------------------------------
+
+
+
+
