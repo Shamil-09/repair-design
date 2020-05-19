@@ -61,6 +61,7 @@
   .types
     &__card
       margin-bottom: 7.14rem
+
   .card
     &__text
       margin-left: 0
@@ -80,10 +81,12 @@
           display: none
       &__heading
         margin-top: 0
+
       &__text
         font-size: 14px
     &--dark
       padding: 0
+      padding-bottom: 300px
 
   .col
     &-50
@@ -92,3 +95,52 @@
       padding-left: 1.3rem
       margin-top: 0
       margin-bottom: 2.36rem
+
+@media screen and ( max-width: 520px  )
+
+  .control
+    background-color: $dark
+    padding-bottom: 0
+    &__video
+      margin: 40px 17px 28px 17px
+      width: 340px
+      min-height: 207px
+      object-fit: cover
+      object-position: center
+
+    &__text
+      font-size: 14px
+      margin-right: 17px
+      margin-left: 17px
+      line-height: 169.8%
+      margin-bottom: 2.5rem
+      color: $light
+      &::before
+        margin-bottom: 1.5rem
+    &__form
+      display: flex
+      flex-direction: column
+      margin-right: 17px
+      margin-left: 17px
+      margin-top: 26px
+    &__label
+      font-size: 15px
+      color: rgba(255, 255, 255, 0.5)
+    &__input
+      font-size: 18px
+      &::placeholder
+        color: $light
+    &__button
+      margin-top: 5.3rem
+      margin-bottom: -2rem
+      order: 4
+    &__policy
+      padding-right: 5rem
+      order: 3
+      &-label
+        margin-top: 0
+        font-size: 16px
+        color: $light
+
+  .input-group1
+    margin-bottom: 5.2rem

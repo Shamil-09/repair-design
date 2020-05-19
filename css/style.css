@@ -408,7 +408,7 @@ body {
 }
 
 .section--dark {
-  background-color: #131313;
+  background-color: #252525;
   color: #fff;
 }
 
@@ -598,7 +598,7 @@ img {
 
 .header {
   position: fixed;
-  background-color: #131313;
+  background-color: #252525;
   padding: 24px 0;
   z-index: 99;
   width: 100%;
@@ -658,7 +658,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 83px;
-  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  background: #252525 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff;
 }
@@ -670,7 +670,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(19, 19, 19, 0.7);
+  background-color: rgba(37, 37, 37, 0.7);
 }
 
 .hero::after {
@@ -681,7 +681,7 @@ img {
   right: 0;
   width: 100%;
   height: 3.46rem;
-  background-color: #131313;
+  background-color: #252525;
 }
 
 .hero__content {
@@ -732,7 +732,7 @@ img {
   bottom: 0;
   min-width: 17.6rem;
   min-height: 6.92rem;
-  background-color: #131313;
+  background-color: #252525;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
@@ -749,7 +749,7 @@ img {
 }
 
 .instagram {
-  background-color: #131313;
+  background-color: #252525;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -874,7 +874,7 @@ img {
   position: relative;
   max-width: 58.357rem;
   min-height: 31rem;
-  background: #131313 url("../img/video-mask.jpg") no-repeat center;
+  background: #252525 url("../img/video-mask.jpg") no-repeat center;
   -webkit-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
 }
@@ -919,6 +919,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-right: 17px;
+  padding-left: 17px;
 }
 
 .control__input-group {
@@ -1030,7 +1032,7 @@ img {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(19, 19, 19, 0.6);
+  background-color: rgba(37, 37, 37, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1050,7 +1052,7 @@ img {
 .modal__dialog {
   max-width: 36.36rem;
   position: relative;
-  background: #131313 url("../img/bg-lines.svg") no-repeat center;
+  background: #252525 url("../img/bg-lines.svg") no-repeat center;
   padding: 2.36rem 3.5rem 1.93rem 3.5rem;
   color: #fff;
 }
@@ -1202,6 +1204,7 @@ img {
   }
   .section--dark {
     padding: 0;
+    padding-bottom: 300px;
   }
   .col-50 {
     width: 100%;
@@ -1209,6 +1212,85 @@ img {
     padding-left: 1.3rem;
     margin-top: 0;
     margin-bottom: 2.36rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .control {
+    background-color: #252525;
+    padding-bottom: 0;
+  }
+  .control__video {
+    margin: 40px 17px 28px 17px;
+    width: 340px;
+    min-height: 207px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .control__text {
+    font-size: 14px;
+    margin-right: 17px;
+    margin-left: 17px;
+    line-height: 169.8%;
+    margin-bottom: 2.5rem;
+    color: #fff;
+  }
+  .control__text::before {
+    margin-bottom: 1.5rem;
+  }
+  .control__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 17px;
+    margin-left: 17px;
+    margin-top: 26px;
+  }
+  .control__label {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .control__input {
+    font-size: 18px;
+  }
+  .control__input::-webkit-input-placeholder {
+    color: #fff;
+  }
+  .control__input:-ms-input-placeholder {
+    color: #fff;
+  }
+  .control__input::-ms-input-placeholder {
+    color: #fff;
+  }
+  .control__input::placeholder {
+    color: #fff;
+  }
+  .control__button {
+    margin-top: 5.3rem;
+    margin-bottom: -2rem;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .control__policy {
+    padding-right: 5rem;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .control__policy-label {
+    margin-top: 0;
+    font-size: 16px;
+    color: #fff;
+  }
+  .input-group1 {
+    margin-bottom: 5.2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
