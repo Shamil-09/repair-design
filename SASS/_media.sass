@@ -149,12 +149,22 @@
 @media screen and ( max-width: 520px  )
 
   .footer
+    padding-bottom: 0
+    background: $dark
+    &__heading
+      padding: 0 16px
+      font-size: 18px
+      line-height: 138.6%
+      margin-bottom: 23px
     &__title
       margin-bottom: 52px
       font-size: 20px
     &__wrap
       padding-right: 18px
       padding-left: 18px
+    &__wrap-bottom
+      display: flex
+      flex-direction: column
     &__form
       display: flex
       flex-direction: column
@@ -171,3 +181,30 @@
     &__button
       padding: 1.585rem 11rem
       font-size: 15px
+    &__span
+      display: block
+    &__span-desktop
+      display: block
+    &__map
+      order: 3
+    &__info
+      order: 4
+      &-images
+        display: flex
+        justify-content: center
+        margin-bottom: 38px
+        &--1
+          background-color: $primary
+          width: 39px
+          height: 39px
+          padding: 11px
+          border-radius: 90%
+          margin-right: 15px
+        &--2
+          background-color: $primary
+          width: 39px
+          height: 39px
+          padding: 11px
+          border-radius: 90%
+    &__menu
+      display: none
