@@ -149,8 +149,6 @@
 @media screen and ( max-width: 520px  )
 
   .footer
-    padding-bottom: 0
-    background: $dark
     &__heading
       padding: 0 16px
       font-size: 18px
@@ -162,9 +160,7 @@
     &__wrap
       padding-right: 18px
       padding-left: 18px
-    &__wrap-bottom
-      display: flex
-      flex-direction: column
+      margin-bottom: 12px
     &__form
       display: flex
       flex-direction: column
@@ -185,10 +181,7 @@
       display: block
     &__span-desktop
       display: block
-    &__map
-      order: 3
     &__info
-      order: 4
       &-images
         display: flex
         justify-content: center
@@ -206,5 +199,21 @@
           height: 39px
           padding: 11px
           border-radius: 90%
+
+@media screen and ( max-width: 760px  )
+
+  .footer
+    padding-bottom: 0
+    background: $dark
     &__menu
       display: none
+    &__map
+      overflow: hidden
+      margin: 0 17px 41px
+      min-height: 255px
+      order: 3
+    &__info
+      order: 4
+    &__wrap-bottom
+      display: flex
+      flex-direction: column
