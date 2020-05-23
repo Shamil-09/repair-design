@@ -55,9 +55,10 @@ $(document).ready(function () {
       userNameControl: {
         required: true,
         minlength: 2,
-        maxlength: 15,
+        maxlength: 15
       },
       userPhoneControl: "required",
+      checkboxControl: "required",
     },
 
     // правило сообщения
@@ -65,9 +66,10 @@ $(document).ready(function () {
       userNameControl: {
         required: "Имя обязательно",
         minlength: "Имя не короче двух букв",
-        maxlength: "Имя не должно превышать 16 букв",
+        maxlength: "Имя не должно превышать 16 букв"
       },
       userPhoneControl: "Телефон обязателен",
+      checkboxControl: "Согласитель с обработкой данных",
     }
   });
 
@@ -82,10 +84,11 @@ $(document).ready(function () {
       userNameFooter: {
         required: true,
         minlength: 2,
-        maxlength: 15,
+        maxlength: 15
       },
       userPhoneFooter: "required",
-      userEmailFooter: "required",
+      userTextFooter: "required",
+      checkboxFooter: "required",
     },
 
     // правило сообщения
@@ -93,10 +96,11 @@ $(document).ready(function () {
       userNameFooter: {
         required: "Имя обязательно",
         minlength: "Имя не короче двух букв",
-        maxlength: "Имя не должно превышать 16 букв",
+        maxlength: "Имя не должно превышать 16 букв"
       },
       userPhoneFooter: "Телефон обязателен",
-      userEmailFooter: "Введите свой вопрос",
+      userTextFooter: "Введите свой вопрос",
+      checkboxFooter: "Согласитель с обработкой данных",
     }
   });
 
@@ -108,31 +112,33 @@ $(document).ready(function () {
     errorElement: "div",
     rules: {
       // сторочное правило
-      userName: {
+      userNameModal: {
         required: true,
         minlength: 2,
-        maxlength: 15,
+        maxlength: 15
       },
-      userPhone: "required",
+      userPhoneModal: "required",
       // правило обьект
-      userEmail: {
+      userEmailModal: {
         required: true,
         email: true
-      }
+      },
+      checkboxModal: "required",
     },
 
     // правило сообщения
     messages: {
-      userName: {
+      userNameModal: {
         required: "Имя обязательно",
         minlength: "Имя не короче двух букв",
-        maxlength: "Имя не должно превышать 16 букв",
+        maxlength: "Имя не должно превышать 16 букв"
       },
-      userPhone: "Телефон обязателен",
-      userEmail: {
+      userPhoneModal: "Телефон обязателен",
+      userEmailModal: {
         required: "Обязательно введите email",
         email: "Введите в формате: name@domain.com"
-      }
+      },
+      checkboxModal: "Согласитель с обработкой данных",
     }
   });
 

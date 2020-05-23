@@ -586,8 +586,8 @@ img {
           justify-content: center;
 }
 
-label.invalid {
-  color: tomato;
+.invalid {
+  color: #E3B873;
 }
 
 input.invalid {
@@ -959,9 +959,11 @@ input.invalid {
 }
 
 .control__policy {
+  position: relative;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-top: 1.2rem;
+  margin-bottom: 3.57rem;
 }
 
 .control__policy-label {
@@ -977,6 +979,11 @@ input.invalid {
 .video__play {
   position: relative;
   margin: auto;
+}
+
+#checkboxControl-error {
+  position: absolute;
+  margin: 1.57rem 13.28rem;
 }
 
 .types__section-title {
@@ -1175,6 +1182,11 @@ input.invalid {
           justify-content: center;
 }
 
+#checkboxFooter-error {
+  position: absolute;
+  margin: 1.57rem 11.28rem;
+}
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -1263,6 +1275,15 @@ input.invalid {
 .modal__button {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+#checkboxModal {
+  position: relative;
+}
+
+#checkboxModal-error {
+  position: absolute;
+  margin: 19px 27px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1414,7 +1435,7 @@ input.invalid {
     margin-top: 26px;
   }
   .control__label {
-    font-size: 15px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.5);
   }
   .control__input {
@@ -1440,7 +1461,7 @@ input.invalid {
             order: 4;
   }
   .control__policy {
-    padding-right: 5rem;
+    padding-right: 2rem;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -1452,6 +1473,13 @@ input.invalid {
   }
   .input-group1 {
     margin-bottom: 5.2rem;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .control__policy {
+    margin: auto;
+    max-width: 575px;
   }
 }
 
@@ -1561,6 +1589,24 @@ input.invalid {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #checkboxFooter-error {
+    margin: 1.57rem 3.28rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #checkboxControl-error {
+    margin: 1.57rem 16.8rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #checkboxControl-error {
+    margin: 1.57rem 2.28rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

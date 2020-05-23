@@ -124,7 +124,7 @@
       margin-left: 17px
       margin-top: 26px
     &__label
-      font-size: 15px
+      font-size: 16px
       color: rgba(255, 255, 255, 0.5)
     &__input
       font-size: 18px
@@ -135,7 +135,7 @@
       margin-bottom: -2rem
       order: 4
     &__policy
-      padding-right: 5rem
+      padding-right: 2rem
       order: 3
       &-label
         margin-top: 0
@@ -144,6 +144,13 @@
 
   .input-group1
     margin-bottom: 5.2rem
+
+@media screen and ( max-width: 2000px  )
+
+  .control
+    &__policy
+      margin: auto
+      max-width: 575px
 
 // footer
 @media screen and ( max-width: 520px  )
@@ -217,3 +224,18 @@
     &__wrap-bottom
       display: flex
       flex-direction: column
+
+@media screen and ( max-width: 520px  )
+
+  #checkboxFooter-error
+    margin: 1.57rem 3.28rem
+
+@media screen and ( max-width: 1200px  )
+
+  #checkboxControl-error
+    margin: 1.57rem 16.8rem
+
+@media screen and ( max-width: 520px  )
+
+  #checkboxControl-error
+    margin: 1.57rem 2.28rem
