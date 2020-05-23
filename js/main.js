@@ -70,6 +70,21 @@ $(document).ready(function () {
       },
       userPhoneControl: "Телефон обязателен",
       checkboxControl: "Согласитель с обработкой данных",
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "sendControl.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+          $(form)[0].reset()
+          modal.removeClass('modal--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса ' + response);
+        }
+      });
     }
   });
 
@@ -101,6 +116,21 @@ $(document).ready(function () {
       userPhoneFooter: "Телефон обязателен",
       userTextFooter: "Введите свой вопрос",
       checkboxFooter: "Согласитель с обработкой данных",
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "sendFooter.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+          $(form)[0].reset()
+          modal.removeClass('modal--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса ' + response);
+        }
+      });
     }
   });
 
@@ -139,6 +169,21 @@ $(document).ready(function () {
         email: "Введите в формате: name@domain.com"
       },
       checkboxModal: "Согласитель с обработкой данных",
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "sendModal.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+          $(form)[0].reset()
+          modal.removeClass('modal--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса ' + response);
+        }
+      });
     }
   });
 
