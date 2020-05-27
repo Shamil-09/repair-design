@@ -9,22 +9,32 @@
   <link href="css/animate.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=e7ad7916-01c2-4bd5-89ae-1c906913ff83&lang=ru_RU"></script> -->
-  <title>Document</title>
+  <title>Repair - design</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+
 </head>
 
 <body>
+
+  <!-- Yandex.Metrika counter -->
+  <script
+    type="text/javascript"> (function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(64402858, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true }); </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/64402858" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript> <!-- /Yandex.Metrika counter -->
+
   <!-- <button class="btn-top" title="Go to top">Наверх</button> -->
-  <header class="header">
+  <header class="header" id="logo">
     <div class="container">
       <div class="menu">
-        <div class="logo">Repair Design Project</div>
+        <div class="logo" href="#logo">Repair Design Project</div>
         <div class="nav">
-          <a href="#" class="nav__item">Главная</a>
-          <a href="#" class="nav__item">Проекты</a>
-          <a href="#" class="nav__item">Замер</a>
+          <a href="#navigation" class="nav__item">Главная</a>
+          <a href="#projects" class="nav__item">Проекты</a>
+          <a href="#types" class="nav__item">Замер</a>
           <a href="#" class="nav__item">Команда</a>
           <a href="#" class="nav__item">Отзывы</a>
-          <a href="#" class="nav__item">Контакты</a>
+          <a href="#contacts" class="nav__item">Контакты</a>
         </div>
         <div class="contacts menu__contacts">
           <a href="+79997683299" class="phone contacts__phone">+7(999)768-32-99</a>
@@ -38,7 +48,7 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="navigation">
       <div class="instagram hero__instagram">
         <a href="#" class="instagram__link">Instagram</a>
       </div>
@@ -49,16 +59,18 @@
             стоимости материалов за счет организации работы</p>
           <button class="button hero__button button--primary wow bounce" data-wow-delay="1.5s"
             data-toggle="modal">Рассчитать стоимость</button>
-          <button class="button hero__button button--outline">Отправить заявку</button>
+
+          <a href="mailto:someone@yoursite.com" class="button hero__button button--outline">Отправить
+            заявку</a>
         </div>
         <!-- /.hero__content -->
       </div>
       <!-- /.container -->
-      <a href=" #" class="hero__scroll-down">листайте вниз</a>
+      <a href="#projects" class="hero__scroll-down">листайте вниз</a>
     </section>
     <!-- /.hero -->
 
-    <section class="section section--dark projects">
+    <section class="section section--dark projects" id="projects">
       <div class="container">
         <div class="row">
           <div class="col-50">
@@ -177,7 +189,8 @@
           зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших
           объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
         </p>
-        <form action="sendControl.php" method="POST" class="form control__form">
+        <form action="sendControl.php" method="POST" onsubmit="ym('64402858', 'reachGoal', 'send-form'); return true;"
+          class="form control__form">
           <div class="control__input-group input-group1">
             <label for="userNameControl" class="label form__label control__label ">Имя</label>
             <input type="text" name="userNameControl" class="input form__input control__input" id="userNameControl"
@@ -204,7 +217,7 @@
     <section class="section types">
       <div class="container">
         <div class="section-title types__section-title">
-          <h2 class="section-title__heading">Виды ремонта</h2>
+          <h2 class="section-title__heading" id="types">Виды ремонта</h2>
           <!-- /.section-title_heading -->
           <div class="section-title__image">
             <img src="img/tools.svg" alt="tools">
@@ -383,7 +396,7 @@
 
   <footer class="footer section--dark">
     <div class="container">
-      <div class="footer__wrap">
+      <div class="footer__wrap" id="contacts">
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="sendFooter.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
@@ -449,7 +462,8 @@
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title modal-response__title">Оставьте заявку и наш менеджер<br> свяжется с вами</h3>
-      <form action="sendModal.php" method="POST" class="form modal__form">
+      <form action="sendModal.php" onsubmit="ym('64402858', 'reachGoal', 'call-back'); return true;" method="POST"
+        class="form modal__form">
         <div class="input-group modal__input-group">
           <label for="userNameModal" class="label form__label label--light">Имя</label>
           <input type="text" name="userNameModal" class="input form__input modal__input input--light" id="userNameModal"

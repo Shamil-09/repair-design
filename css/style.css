@@ -637,6 +637,7 @@ input.invalid {
   color: #E3B873;
   text-transform: uppercase;
   margin-right: 11px;
+  cursor: pointer;
 }
 
 .nav__item {
@@ -722,6 +723,7 @@ input.invalid {
   margin-right: 1.12rem;
   padding: 19px 28px;
   font-size: 0.95rem;
+  text-decoration: none;
 }
 
 .hero__instagram {
@@ -1426,6 +1428,7 @@ input.invalid {
   }
   .logo {
     margin-left: 18px;
+    cursor: pointer;
   }
 }
 
