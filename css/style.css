@@ -677,6 +677,7 @@ input.invalid {
   padding-top: 83px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
+  min-height: 50.4rem;
   color: #fff;
 }
 
@@ -704,7 +705,6 @@ input.invalid {
 .hero__content {
   position: relative;
   max-width: 47.84rem;
-  margin-left: 4.28rem;
 }
 
 .hero__title {
@@ -804,6 +804,7 @@ input.invalid {
 }
 
 .title {
+  margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
@@ -1105,6 +1106,12 @@ input.invalid {
   line-height: 28px;
 }
 
+.footer__span {
+  cursor: pointer;
+  color: #E3B873;
+  text-decoration: none;
+}
+
 .footer__info {
   max-width: 500px;
   margin: auto;
@@ -1393,11 +1400,11 @@ input.invalid {
   }
   .hero__content {
     margin-left: 0;
-    max-width: 23rem;
+    min-width: 23rem;
   }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 670px) {
   .contacts__button {
     display: none;
   }
@@ -1425,6 +1432,9 @@ input.invalid {
     display: block;
     min-width: 22.86rem;
     margin-bottom: 1.85rem;
+  }
+  .button--outline {
+    text-align: center;
   }
   .logo {
     margin-left: 18px;
