@@ -183,6 +183,26 @@ $(document).ready(function () {
   $('[type=tel]').mask('+7(000)00-00-000', { placeholder: "+7 (000) 000-00-00" });
 
 
+  // youtube link
+
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '465',
+      width: '100%',
+      videoId: 'RHzzLqJWqHs',
+      events: {
+        'onReady': videoPlay,
+
+      }
+    });
+  })
+
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
+
+
 
   // яндекс карта
 

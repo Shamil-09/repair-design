@@ -996,6 +996,7 @@ input.invalid {
 .video__play {
   position: relative;
   margin: auto;
+  cursor: pointer;
 }
 
 #checkboxControl-error {
