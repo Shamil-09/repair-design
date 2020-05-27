@@ -1,23 +1,17 @@
 
 
 $(document).ready(function () {
-  var modal = $('.modal'),
+  var modal = $('.modal-response'),
     modalBtn = $('[data-toggle=modal]'),
     closelBtn = $('.modal__close');
 
   modalBtn.on('click', function () {
-    modal.toggleClass('modal--visible');
+    modal.addClass('modal--visible');
   });
   closelBtn.on('click', function () {
-    modal.toggleClass('modal--visible');
-  });
-
-
-
-  $(document).keydown(function (event) {
-    if (event.keyCode == 27) {
-      modal.toggleClass('modal');
-    }
+    modal.removeClass('modal--visible');
+    $('.modal__form').removeClass('modal__form--close');
+    $('.modal-thanks').removeClass('modal--visible');
   });
 
 
@@ -77,9 +71,8 @@ $(document).ready(function () {
         url: "sendControl.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
-          $(form)[0].reset()
-          modal.removeClass('modal--visible');
+          $(form)[0].reset();
+          $('.modal-thanks').addClass('modal--visible');
         },
         error: function (response) {
           console.error('Ошибка запроса ' + response);
@@ -123,9 +116,8 @@ $(document).ready(function () {
         url: "sendFooter.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
-          $(form)[0].reset()
-          modal.removeClass('modal--visible');
+          $(form)[0].reset();
+          $('.modal-thanks').addClass('modal--visible');
         },
         error: function (response) {
           console.error('Ошибка запроса ' + response);
@@ -176,9 +168,9 @@ $(document).ready(function () {
         url: "sendModal.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
-          $(form)[0].reset()
+          $(form)[0].reset();
           modal.removeClass('modal--visible');
+          $('.modal-thanks').addClass('modal--visible');
         },
         error: function (response) {
           console.error('Ошибка запроса ' + response);
@@ -190,24 +182,59 @@ $(document).ready(function () {
   // маска для телефона
   $('[type=tel]').mask('+7(000)00-00-000', { placeholder: "+7 (000) 000-00-00" });
 
+
+
   // яндекс карта
 
-  ymaps.ready(function () {
+
+
+  var loadMap = false;
+  $(window).scroll(function () {
+    if (($(this).scrollTop() > 1000) && !loadMap) {
+      loadMap = true;
+      loadScript('https://api-maps.yandex.ru/2.1/?load=package.map&apikey=e7ad7916-01c2-4bd5-89ae-1c906913ff83&lang=ru_RU&loadByRequire=1', function () {
+        ymaps.load(initMap);
+      });
+    }
+  });
+
+  function loadScript(url, callback) {
+
+    var script = document.createElement("script");
+
+    if (script.readyState) {
+      script.onreadystatechange = function () {
+        if (script.readyState == "loaded" ||
+          script.readyState == "complete") {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {
+      script.onload = function () {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  function initMap() {
     var myMap = new ymaps.Map('map', {
-      center: [55.810471, 37.645070],
-      zoom: 9
+      center: [55.786852, 49.142351],
+      zoom: 17
     }, {
+      autoFitToViewport: 'always',
       searchControlProvider: 'yandex#search'
     }),
-
       // Создаём макет содержимого.
       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
         '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
       ),
-
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
         hintContent: 'Наша компания',
-        balloonContent: 'вход свободный'
+        balloonContent: 'Вход свободный'
       }, {
         // Опции.
         // Необходимо указать данный тип макета.
@@ -220,15 +247,52 @@ $(document).ready(function () {
         // её "ножки" (точки привязки).
         iconImageOffset: [-5, -38]
       });
-
-
-
-    myMap.geoObjects
-      .add(myPlacemark);
-
-  });
+    // myMap.behaviors.disable('scrollZoom');
+    myMap.behaviors.disable('scrollZoom');
+    myMap.geoObjects.add(myPlacemark);
+  };
 
 });
+
+// ==============================================================
+
+//   ymaps.ready(function () {
+//     var myMap = new ymaps.Map('map', {
+//       center: [55.810471, 37.645070],
+//       zoom: 9
+//     }, {
+//       searchControlProvider: 'yandex#search'
+//     }),
+
+//       // Создаём макет содержимого.
+//       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+//         '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+//       ),
+
+//       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+//         hintContent: 'Наша компания',
+//         balloonContent: 'вход свободный'
+//       }, {
+//         // Опции.
+//         // Необходимо указать данный тип макета.
+//         iconLayout: 'default#image',
+//         // Своё изображение иконки метки.
+//         iconImageHref: 'img/marker.png',
+//         // Размеры метки.
+//         iconImageSize: [32, 32],
+//         // Смещение левого верхнего угла иконки относительно
+//         // её "ножки" (точки привязки).
+//         iconImageOffset: [-5, -38]
+//       });
+
+
+
+//     myMap.geoObjects
+//       .add(myPlacemark);
+
+//   });
+
+// });
 
 // -------------------------------------------------------------------------
 // var $btnTop = $('.btn-top')
@@ -243,6 +307,13 @@ $(document).ready(function () {
 // $btnTop.on('click', function () {
 //   $('html,body').animate({ scrollTop: 0 }, 1000)
 // })
+
+// $('.modal-response__title').html('Оставьте заявку и наш менеджер свяжется с вами ');
+
+// $('.modal__form').addClass('modal__form--close');
+// $('.modal-response__title').html('Ваша заявка принята. Мы свяжемся с вами в течение 30 минут.')
+
+
 // //---------------------------------------------------------------------------
 
 

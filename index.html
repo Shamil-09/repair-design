@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link href="css/animate.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=e7ad7916-01c2-4bd5-89ae-1c906913ff83&lang=ru_RU"
-    type="text/javascript"></script>
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=e7ad7916-01c2-4bd5-89ae-1c906913ff83&lang=ru_RU"></script> -->
   <title>Document</title>
 </head>
 
@@ -44,7 +43,7 @@
         <a href="#" class="instagram__link">Instagram</a>
       </div>
       <div class="container">
-        <div class="hero__content wow fadeInRight" data-wow-delay=".3s">
+        <div class="hero__content">
           <h1 class="title hero__title">Tурецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
           <p class="hero__text">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от
             стоимости материалов за счет организации работы</p>
@@ -169,7 +168,7 @@
         </div>
         <!-- /.section-title -->
         <div class="control__video video">
-          <img src="img/play-icon.svg" alt="play-icon" class="video__play  wow heartBeat" data-wow-delay="1s">
+          <img src="img/play-icon.svg" alt="play-icon" class="video__play">
         </div>
         <!-- /.control-video video -->
         <p class="control__text">
@@ -324,7 +323,7 @@
           <!-- /.col -->
           <div class="col-30 wow slideInUp" data-wow-delay="0.3s">
             <div class="card design__card">
-              <img src="img/design/image 3.jpg" alt="Капитальный ремонт" class="card__image">
+              <img src="img/design/image2.jpg" alt="Капитальный ремонт" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Стандартный</h3>
                 <!-- /.card__title -->
@@ -347,7 +346,7 @@
           <!-- /.col -->
           <div class="col-30 wow slideInUp" data-wow-delay="0.5s">
             <div class="card design__card">
-              <img src="img/design/image 3.1.jpg" alt="Дизайнерский ремонт" class="card__image">
+              <img src="img/design/image3.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Полный</h3>
                 <!-- /.card__title -->
@@ -445,10 +444,10 @@
     <!-- /.footer__menu -->
   </footer>
 
-  <div class="modal">
+  <div class="modal modal-response">
     <div class="modal__dialog">
       <button class="modal__close"></button>
-      <h3 class="modal__title">Оставьте заявку и наш менеджер<br> свяжется с вами</h3>
+      <h3 class="modal__title modal-response__title">Оставьте заявку и наш менеджер<br> свяжется с вами</h3>
       <form action="sendModal.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
           <label for="userNameModal" class="label form__label label--light">Имя</label>
@@ -473,6 +472,15 @@
       </form>
     </div>
   </div>
+
+  <div class="modal modal-thanks">
+    <div class="modal__dialog">
+      <button class="modal__close"></button>
+      <h3 class="modal__title modal-thanks__title">Ваша заявка принята. Мы свяжемся с вами в течение 30 минут.</h3>
+    </div>
+  </div>
+
+
 
   <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
