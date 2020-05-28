@@ -587,11 +587,13 @@ img {
 }
 
 .invalid {
-  color: #E3B873;
+  position: absolute;
+  color: tomato;
   padding-top: 5px;
 }
 
 input.invalid {
+  position: relative;
   border-bottom: 1px solid tomato;
 }
 
@@ -996,14 +998,25 @@ input.invalid {
   color: #131313;
 }
 
+.control__input-group {
+  position: relative;
+}
+
 .video__play {
   position: relative;
   margin: auto;
   cursor: pointer;
 }
 
+#userNameControl-error {
+  margin-top: 45px;
+}
+
+#userPhoneControl-error {
+  margin-top: 45px;
+}
+
 #checkboxControl-error {
-  position: absolute;
   margin: 2.57rem -0.1rem;
 }
 
@@ -1209,9 +1222,20 @@ input.invalid {
           justify-content: center;
 }
 
+#userNameFooter-error {
+  margin-top: 40px;
+}
+
+#userPhoneFooter-error {
+  margin-top: 40px;
+}
+
+#userTextFooter-error {
+  margin-top: 40px;
+}
+
 #checkboxFooter-error {
-  position: absolute;
-  margin: 1.57rem 11.28rem;
+  margin: 1.3rem 11.28rem;
 }
 
 .modal {
@@ -1304,13 +1328,21 @@ input.invalid {
       align-self: flex-end;
 }
 
-#checkboxModal {
-  position: relative;
+#userNameModal-error {
+  margin-top: 40px;
+}
+
+#userPhoneModal-error {
+  margin-top: 40px;
+}
+
+#userEmailModal-error {
+  margin-top: 40px;
 }
 
 #checkboxModal-error {
-  position: absolute;
-  margin: 19px 27px;
+  margin-top: 14px;
+  margin-left: 25px;
 }
 
 .modal-thanks {
@@ -1707,18 +1739,38 @@ input.invalid {
   }
 }
 
-@media screen and (max-width: 520px) {
-  #checkboxFooter-error {
-    margin: 1.57rem 3.28rem;
+@media screen and (min-width: 1200px) {
+  #userNameFooter-error {
+    margin-top: 46px;
   }
-  .ymaps-2-1-76-map {
-    max-height: 255px;
+  #userPhoneFooter-error {
+    margin-top: 46px;
+  }
+  #userTextFooter-error {
+    margin-top: 46px;
+  }
+  #checkboxFooter-error {
+    margin: 1.3rem 11.28rem;
+  }
+  #userNameModal-error {
+    margin-top: 48px;
+  }
+  #userPhoneModal-error {
+    margin-top: 48px;
+  }
+  #userEmailModal-error {
+    margin-top: 48px;
+  }
+  #checkboxModal-error {
+    margin-top: 17px;
+    margin-left: 26px;
+    argin-right: 0;
   }
 }
 
 @media screen and (max-width: 520px) {
-  #checkboxControl-error {
-    margin: 2.57rem -1.7rem;
+  #checkboxFooter-error {
+    margin: 1.3rem 3.8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

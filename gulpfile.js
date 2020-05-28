@@ -4,7 +4,7 @@ const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
 const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
-const tinypng = require('gulp-tinypng-compress');
+// const tinypng = require('gulp-tinypng-compress');
 
 // Static server
 gulp.task('browser-sync', function () {
@@ -76,4 +76,4 @@ function fonts(done) {
 //   done();
 // }
 
-exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin);
+exports.build = series(buildCSS, buildJS, html, php, fonts);
