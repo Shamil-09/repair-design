@@ -13,6 +13,8 @@ $(document).ready(function () {
     $('.modal__form').removeClass('modal__form--close');
     $('.modal-thanks').removeClass('modal--visible');
   });
+
+
   $(document).click(function (e) {
     if ($(e.target).is('.modal-primary') || $(e.target).is('.modal-thanks')) {
       modal.removeClass('modal--visible');
