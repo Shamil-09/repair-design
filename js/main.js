@@ -11,7 +11,7 @@ $(document).ready(function () {
   closelBtn.on('click', function () {
     modal.removeClass('modal--visible');
     $('.modal__form').removeClass('modal__form--close');
-    $('.modal-thanks').removeClass('modal--visible');
+    $('.modal-thanks').removeClass('modal-thanks--visible');
   });
 
 
@@ -100,7 +100,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          $('.modal-thanks').addClass('modal--visible');
+          $('.modal-thanks').addClass('modal-thanks--visible');
         },
         error: function (response) {
           console.error('Ошибка запроса ' + response);
@@ -145,7 +145,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          $('.modal-thanks').addClass('modal--visible');
+          $('.modal-thanks').addClass('modal-thanks--visible');
         },
         error: function (response) {
           console.error('Ошибка запроса ' + response);
@@ -198,7 +198,7 @@ $(document).ready(function () {
         success: function (response) {
           $(form)[0].reset();
           modal.removeClass('modal--visible');
-          $('.modal-thanks').addClass('modal--visible');
+          $('.modal-thanks').addClass('modal-thanks--visible');
         },
         error: function (response) {
           console.error('Ошибка запроса ' + response);
