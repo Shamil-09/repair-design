@@ -358,6 +358,7 @@ template {
 }
 
 .container {
+  width: 90%;
   max-width: 1256px;
   margin: auto;
 }
@@ -640,6 +641,7 @@ input.invalid {
   text-transform: uppercase;
   margin-right: 11px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .nav__item {
@@ -707,6 +709,7 @@ input.invalid {
 .hero__content {
   position: relative;
   max-width: 47.84rem;
+  margin-left: 4.28rem;
 }
 
 .hero__title {
@@ -1459,6 +1462,7 @@ input.invalid {
   }
   .hero__content {
     max-width: 22.86rem;
+    margin: auto;
   }
   .hero__button {
     display: block;

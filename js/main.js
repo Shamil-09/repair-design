@@ -31,6 +31,18 @@ $(document).ready(function () {
 
 
 
+  $('.go-to').click(function () { // ловим клик по ссылке с классом go_to
+    var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+    if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 1000); // анимируем скроолинг к элементу scroll_el
+    }
+    return false; // выключаем стандартное действие
+  });
+
+
+
+
+
   var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     pagination: {
@@ -287,68 +299,4 @@ $(document).ready(function () {
   };
 
 });
-
-// ==============================================================
-
-//   ymaps.ready(function () {
-//     var myMap = new ymaps.Map('map', {
-//       center: [55.810471, 37.645070],
-//       zoom: 9
-//     }, {
-//       searchControlProvider: 'yandex#search'
-//     }),
-
-//       // Создаём макет содержимого.
-//       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-//         '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-//       ),
-
-//       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-//         hintContent: 'Наша компания',
-//         balloonContent: 'вход свободный'
-//       }, {
-//         // Опции.
-//         // Необходимо указать данный тип макета.
-//         iconLayout: 'default#image',
-//         // Своё изображение иконки метки.
-//         iconImageHref: 'img/marker.png',
-//         // Размеры метки.
-//         iconImageSize: [32, 32],
-//         // Смещение левого верхнего угла иконки относительно
-//         // её "ножки" (точки привязки).
-//         iconImageOffset: [-5, -38]
-//       });
-
-
-
-//     myMap.geoObjects
-//       .add(myPlacemark);
-
-//   });
-
-// });
-
-// -------------------------------------------------------------------------
-// var $btnTop = $('.btn-top')
-// $(window).on('scroll', function () {
-//   if ($(window).scrollTop() >= 20) {
-//     $btnTop.fadeIn();
-//   } else {
-//     $btnTop.fadeOut();
-//   }
-// });
-
-// $btnTop.on('click', function () {
-//   $('html,body').animate({ scrollTop: 0 }, 1000)
-// })
-
-// $('.modal-response__title').html('Оставьте заявку и наш менеджер свяжется с вами ');
-
-// $('.modal__form').addClass('modal__form--close');
-// $('.modal-response__title').html('Ваша заявка принята. Мы свяжемся с вами в течение 30 минут.')
-
-
-// //---------------------------------------------------------------------------
-
-
 
