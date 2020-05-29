@@ -771,6 +771,10 @@ input.invalid {
   background: url("../img/arrow-down.svg") no-repeat center;
 }
 
+#contacts__phone {
+  padding: 19px 47px;
+}
+
 .instagram {
   background-color: #131313;
   display: -webkit-box;
@@ -1562,7 +1566,6 @@ input.invalid {
   }
   .control__video {
     margin: 40px 17px 28px 17px;
-    width: 340px;
     min-height: 207px;
     -o-object-fit: cover;
        object-fit: cover;

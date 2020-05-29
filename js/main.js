@@ -208,7 +208,7 @@ $(document).ready(function () {
   });
 
   // маска для телефона
-  $('[type=tel]').mask('+7(000)00-00-000', { placeholder: "+7 (000) 000-00-00" });
+  $('[type=tel]').mask('+7(000)00-00-000');
 
 
   // youtube link
