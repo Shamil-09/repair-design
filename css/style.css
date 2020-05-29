@@ -598,23 +598,6 @@ input.invalid {
   border-bottom: 1px solid tomato;
 }
 
-.btn-top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 40px;
-  z-index: 199;
-  border: none;
-  background-color: #E3B873;
-  cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 5px;
-}
-
-.btn-top:hover {
-  background-color: #9A835D;
-}
-
 .header {
   position: fixed;
   background-color: #131313;
@@ -1229,6 +1212,11 @@ input.invalid {
           justify-content: center;
 }
 
+[class*="ymaps-2-1"][class*="-ground-pane"] {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
 #userNameFooter-error {
   margin-top: 40px;
 }
@@ -1679,7 +1667,7 @@ input.invalid {
             justify-content: flex-start;
   }
   .footer__button {
-    padding: 1.585rem 11rem;
+    padding: 1.585rem 9rem;
     font-size: 15px;
   }
   .footer__span {
@@ -1746,6 +1734,18 @@ input.invalid {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .button--primary {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  __item:hover {
+    color: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   #userNameFooter-error {
     margin-top: 46px;
@@ -1778,6 +1778,57 @@ input.invalid {
 @media screen and (max-width: 520px) {
   #checkboxFooter-error {
     margin: 1.3rem 3.8rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer__button {
+    padding: 1.585rem 7rem;
+  }
+}
+
+#checkboxControl-error {
+  margin: 3.87rem 0.9rem;
+}
+
+@media screen and (max-height: 450px) {
+  .modal {
+    overflow-y: scroll;
+  }
+  .modal__dialog {
+    max-height: 320px;
+    min-width: 36.36rem;
+    padding: 0.36rem 3.5rem 1.93rem 3.5rem;
+  }
+  .modal__close {
+    margin: 12px;
+  }
+  .modal__title {
+    font-size: 1.357rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.43rem;
+  }
+  .modal__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal__input-group {
+    margin-bottom: 0.428rem;
+  }
+  .modal__input-group:last-of-type {
+    margin-bottom: 0;
+  }
+  .modal__policy {
+    margin-bottom: 0.7rem;
+  }
+  .modal__button {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 /*# sourceMappingURL=style.css.map */

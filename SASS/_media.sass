@@ -198,7 +198,7 @@
       display: flex
       justify-content: flex-start
     &__button
-      padding: 1.585rem 11rem
+      padding: 1.585rem 9rem
       font-size: 15px
     &__span
       display: block
@@ -241,6 +241,18 @@
       display: flex
       flex-direction: column
 
+@media screen and ( max-width: 992px  )
+
+  .button
+    &--primary
+      box-shadow: none
+
+  .nav
+  &__item
+    &:hover
+      color: none
+      transition: none
+
 @media screen and ( min-width: 1200px  )
 
   #userNameFooter-error
@@ -273,3 +285,38 @@
 
   #checkboxFooter-error
     margin: 1.3rem 3.8rem
+
+@media screen and ( max-width: 375px  )
+
+  .footer
+    &__button
+      padding: 1.585rem 7rem
+
+#checkboxControl-error
+  margin: 3.87rem 0.9rem
+
+@media screen and ( max-height: 450px )
+  .modal
+    overflow-y: scroll
+    &__dialog
+      max-height: 320px
+      min-width: 36.36rem
+      padding: 0.36rem 3.5rem 1.93rem 3.5rem
+    &__close
+      margin: 12px
+    &__title
+      font-size: 1.357rem
+      margin-top: 0.3rem
+      margin-bottom: 0.43rem
+    &__form
+      display: flex
+      flex-direction: column
+    &__input
+      &-group
+        margin-bottom: 0.428rem
+        &:last-of-type
+          margin-bottom: 0
+    &__policy
+      margin-bottom: 0.7rem
+    &__button
+      align-self: flex-end
